@@ -36,7 +36,7 @@ function App() {
 
         projects.splice(indexOfDeletedRepo, 1)
 
-        setProjects([...projects]) //spread to create a new array to change the state
+        setProjects(projects.filter(project => project.id !== id)) //spread to create a new array to change the state
       })
       .catch(error => console.error(error))
   }
